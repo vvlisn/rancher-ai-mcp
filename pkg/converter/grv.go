@@ -139,6 +139,11 @@ var K8sKindsToGVRs = map[string]schema.GroupVersionResource{
 	// --- RANCHER CATTLE Resources (Group: "cattle.io") ---
 	"setting": {Group: ManagementGroup, Version: "v3", Resource: "settings"},
 
+	// --- PaaS Custom Resources (Group: "container.starbucks.net") ---
+	"lane":      {Group: "container.starbucks.net", Version: "v1beta1", Resource: "lanes"},
+	"branch":    {Group: "container.starbucks.net", Version: "v1beta1", Resource: "branches"},
+	"nsprofile": {Group: "container.starbucks.net", Version: "v1beta1", Resource: "nsprofiles"},
+
 	// --- CLUSTER API Resources (Group: "cluster.x-k8s.io") ---
 	// NB: version is intentionally left empty as it can vary (v1beta1, v1beta2, etc.) depending on the version
 	// of Rancher being used. Instead of hardcoding the version, we instead query all available versions when looking
